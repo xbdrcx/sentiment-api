@@ -4,10 +4,6 @@ This project involves building an API using Python's FastAPI framework to delive
 
 ---
 
-### What is an API?
-
-An API (Application Programming Interface) is a set of protocols and definitions that allow different software components or programs to communicate with each other and share data.
-
 ### What is FastAPI? 
 
 FastAPI is a high-performance, easy to build-with, Python web framework capable of building and delivering API solutions.
