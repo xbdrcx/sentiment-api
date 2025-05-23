@@ -20,7 +20,7 @@ FastAPI is a high-performance, easy to build-with, Python web framework capable 
 
 ## Quick Start
 
-Assuming that Python and git are installed on the machine:
+These instruction should work on a Windows PC with Python and git installed:
 
 1. Clone repository
 ```
@@ -34,8 +34,7 @@ python -m pip install -r requirements.txt
 
 3. Run the application
 ```
-cd app
-uvicorn main:app --reload
+cd app && uvicorn main:app --reload
 ```
 
 4. Access the API: http://localhost:8000/events
