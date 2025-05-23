@@ -1,6 +1,6 @@
 # FastAPI for AI
 
-This project consists in the creation of an API using Python's FastAPI framework capable of delivering AI solution.
+This project involves building an API using Python's FastAPI framework to deliver an AI-powered solution.
 
 ---
 
@@ -19,6 +19,8 @@ This project consists in the creation of an API using Python's FastAPI framework
 
 # Quick Start
 
+Assuming that Python and git are installed on the machine:
+
 1. Clone repository
 ```
 git clone https://github.com/xbdrcx/fastapi4ai
@@ -31,9 +33,10 @@ python -m pip install -r requirements.txt
 
 3. Run the application
 ```
+cd app
 uvicorn main:app --reload
 ```
 
-4. Access the API
-http://localhost:8000/events
+4. Access the API: http://localhost:8000/events
+
 
