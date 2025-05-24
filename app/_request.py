@@ -1,22 +1,30 @@
 import requests, json, uuid
 
-def send_test_event():
+def test_analysis():
     url = "http://localhost:8000/analyze"
 
-    event_data = {
-        "text": "I love using FastAPI for building AI apps!",
-    }
+    text_data = [
+        {
+            "text": "I love using FastAPI for building AI apps!"
+        },
+        {
+            "text": "This test doesn't seem right."
+        },
+        {
+            "text": "Yet another test for this awesome API"
+        }
+    ]
 
     headers = {
         "Content-Type": "application/json",
     }
 
     # Send POST request to the endpoint
-    response = requests.post(url=url, data=json.dumps(event_data), headers=headers)
+    response = requests.post(url=url, data=json.dumps(text_data), headers=headers)
 
     print(f"Status Code: {response.status_code}")
     print(f"Response: {response.json()}")
     print(f"Full Response Headers: {response.headers}")
 
 if __name__ == "__main__":
-    send_test_event()
+    test_analysis()

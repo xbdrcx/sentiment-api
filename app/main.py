@@ -2,7 +2,7 @@ from typing import List
 from transformers import pipeline
 from fastapi import FastAPI, APIRouter
 from schemas import *
-import sentiment, torch
+import torch
 torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load model for sentiment analysis
@@ -26,7 +26,7 @@ def root():
 def analyze(inputs: List[TextInput]):
     results = []
     for input in inputs:
-        result = sentiment.sentiment_pipeline(input.text)[0]
+        result = sentiment_pipeline(input.text)[0]
         results.append(SentimentOutput(label=result["label"], score=result["score"]))
     return results
 
