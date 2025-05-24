@@ -1,14 +1,10 @@
 import requests, json, uuid
 
 def send_test_event():
-    url = "http://localhost:8000/events/"
+    url = "http://localhost:8000/analyze"
 
     event_data = {
-        "event_id": str(uuid.uuid4()),
-        "event_type": "test_event",
-        "event_data": {
-            "message": "Can you explain how to use FastAPI?",
-        }
+        "text": "I love using FastAPI for building AI apps!",
     }
 
     headers = {

@@ -1,21 +1,33 @@
-from http import HTTPStatus
-from starlette.responses import Response
+from typing import List
+from transformers import pipeline
 from fastapi import FastAPI, APIRouter
 from schemas import *
-import json
+import sentiment, torch
+torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-app = FastAPI()
+# Load model for sentiment analysis
+sentiment_pipeline = pipeline("sentiment-analysis")
 
-# Router
+# Initialize FastAPI app
+app = FastAPI(
+    title="Sentiment Analysis API",
+    description="A simple API for performing sentiment analysis on text using Hugging Face Transformers. Submit text and receive a sentiment label and confidence score."    
+)
+
+# Define router
 router = APIRouter()
-router.include_router(router, prefix="/events", tags=["events"])
+router.include_router(router, prefix="/sentiment", tags=["sentiment"])
 
-@router.post("/", dependencies=[])
-def handle_event(data: EventSchema) -> Response:
-    print(data)
-    return Response(
-        content=json.dumps({"message": "Data received!"}),
-        status_code=HTTPStatus.ACCEPTED,
-    )
+@router.get("/", tags=["utility"])
+def root():
+    return { "message": "Welcome to Sentiment Analysis API 1.0" }
+
+@router.post("/analyze", response_model=List[SentimentOutput])
+def analyze(inputs: List[TextInput]):
+    results = []
+    for input in inputs:
+        result = sentiment.sentiment_pipeline(input.text)[0]
+        results.append(SentimentOutput(label=result["label"], score=result["score"]))
+    return results
 
 app.include_router(router)
