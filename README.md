@@ -47,9 +47,4 @@ python -m pip install -r requirements.txt
 cd app && uvicorn main:app --reload
 ```
 
-4. Access the API: 
-
-        http://localhost:8000/docs
-[GET]   http://localhost:8000/
-[POST]  http://localhost:8000/analyze
-
+4. Access the API: http://localhost:8000/docs
