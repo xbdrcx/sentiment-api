@@ -6,7 +6,7 @@ This project involves building an API using Python's FastAPI framework to delive
 
 ### What is an API?
 
-API, or Application Programming Interface, is a set of rules that allow a programs to communicate and exchange data.
+API, or Application Programming Interface, is a set of rules that allow programs to communicate and exchange data.
 
 ### What is FastAPI? 
 
@@ -47,4 +47,9 @@ python -m pip install -r requirements.txt
 cd app && uvicorn main:app --reload
 ```
 
-4. Access the API: http://localhost:8000/
+4. Access the API: 
+
+        http://localhost:8000/docs
+[GET]   http://localhost:8000/
+[POST]  http://localhost:8000/analyze
+
