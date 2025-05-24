@@ -26,7 +26,17 @@ router.include_router(router, prefix="/sentiment", tags=["sentiment"])
 def root():
     return { "message": "Welcome to Sentiment Analysis API 1.0" }
 
-@router.post("/analyze", response_model=List[SentimentOutput])
+@router.post(
+    "/analyze",
+    summary="Analyze Sentiment",
+    description="Analyze the sentiment of a list of texts and return the sentiment label and confidence score for each.",
+    response_model=List[SentimentOutput],
+    responses={
+        200: {"description": "Successful sentiment analysis."},
+        422: {"description": "Validation Error"},
+        500: {"description": "Internal Server Error"}
+    }
+)
 def analyze(inputs: List[TextInput]):
     logger.info(f"Received {len(inputs)} texts for analysis")
     results = []

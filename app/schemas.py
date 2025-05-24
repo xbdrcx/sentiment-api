@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field
 # Pydantic model used to defined and validate structure of user input 
 class TextInput(BaseModel):
     """ User Input Schema """
-    text: str = Field(..., min_length=2, description="Text to analyze.")
+    text: str = Field(..., min_length=2, description="Text to analyze.", example="I love this product!")
 
 # Pydantic model used to defined and validate structure of the sentiment analysis
 class SentimentOutput(BaseModel):
