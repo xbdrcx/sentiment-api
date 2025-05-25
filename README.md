@@ -66,12 +66,12 @@ git clone https://github.com/xbdrcx/fastapi4ai && cd fastapi4ai
 
 2. Create virtual environment and install dependencies
 ```
-python -m venv venv && cd scripts/venv && activate && cd ../../app
+python -m venv venv && cd scripts/venv && activate && cd ../.. && python -m pip install -r requirements.txt
 ```
 
 3. Run application
 ```
-uvicorn main:app --reload
+cd app && uvicorn main:app --reload
 ```
 
 4. Access the API: http://localhost:8000/docs
