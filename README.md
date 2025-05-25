@@ -30,7 +30,7 @@ Sentiment Analysis is a typical AI task performed by a trained model that envolv
 
 ## Quick Start
 
-These instruction should work on a Windows PC with Python =<3.13.3 and git installed:
+These instruction should work on a Windows PC with Python >=3.13.3 and git installed:
 
 1. Clone repository
 ```
