@@ -1,3 +1,6 @@
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 from fastapi import FastAPI, APIRouter, HTTPException
 from transformers import pipeline
 from typing import List
@@ -12,11 +15,16 @@ logger = logging.getLogger(__name__)
 # Load model for sentiment analysis
 sentiment_pipeline = pipeline("sentiment-analysis")
 
+# Define slowapi Rate Limiter
+limiter = Limiter(key_func=get_remote_address)
+
 # Initialize FastAPI app
 app = FastAPI(
     title="Sentiment Analysis API",
     description="A simple API for performing sentiment analysis on text using Hugging Face Transformers. Submit text and receive a sentiment label and confidence score."    
 )
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # Define router
 router = APIRouter()
@@ -37,6 +45,7 @@ def root():
         500: {"description": "Internal Server Error"}
     }
 )
+@limiter.limit("5/minute")  # Limit to 5 requests / minute per IP
 def analyze(inputs: List[TextInput]):
     logger.info(f"Received {len(inputs)} texts for analysis")
     results = []
