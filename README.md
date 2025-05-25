@@ -1,6 +1,6 @@
 # FastAPI for AI
 
-This project involves building an API using Python's FastAPI framework to deliver an AI-powered Sentiment Analysis solution.
+This project involves building an API using Python's FastAPI framework and Hugging Face Transformers to deliver an AI-powered Sentiment Analysis solution, all deployed inside Docker.
 
 ---
 
