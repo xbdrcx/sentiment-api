@@ -45,7 +45,7 @@ These instructions require a Windows PC with Python 3.13.3, git, and Docker inst
 git clone https://github.com/xbdrcx/sentiment-api && cd sentiment-api
 ```
 
-2. Build Docker image (this step might take a bit)
+2. Build Docker image
 ```
 docker build -t sentiment-api .
 ```
