@@ -78,6 +78,12 @@ cd app && uvicorn main:app --reload
 
 ---
 
+## Example Usage
+
+
+
+---
+
 The repository includes:
 
 <code>app/main.py</code> - Main script where all the API logic, AI model, and configuration is at.
@@ -91,4 +97,3 @@ The repository includes:
 ---
 
 Model used: https://huggingface.co/tabularisai/multilingual-sentiment-analysis
-

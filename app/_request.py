@@ -1,4 +1,4 @@
-import requests, json, uuid
+import requests, json
 
 def test_analysis():
     url = "http://localhost:8000/analyze"
