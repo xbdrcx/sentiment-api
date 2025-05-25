@@ -28,7 +28,7 @@ Hugging Face is an online platform and open-source community that provide tools,
 
 ### What is Sentiment Analysis?
 
-Sentiment Analysis is a typical AI task performed by a trained model that envolves the process of analyzing text to determine the emotional tone of a message.
+Sentiment Analysis is a typical AI task performed by a trained model that involves the process of analyzing text to determine the emotional tone of a message.
 
 ### What is Docker?
 
