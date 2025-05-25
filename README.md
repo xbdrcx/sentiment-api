@@ -39,6 +39,10 @@ git clone https://github.com/xbdrcx/fastapi4ai
 
 2. Install dependencies
 ```
+cd fastapi4ai
+python -m venv venv
+cd venv/scripts
+activate
 python -m pip install -r requirements.txt
 ```
 
