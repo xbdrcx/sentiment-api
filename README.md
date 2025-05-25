@@ -1,6 +1,6 @@
-# FastAPI for AI
+# Sentiment Analysis API
 
-This project involves building an API using Python's FastAPI framework and Hugging Face Transformers to deliver an AI-powered Sentiment Analysis solution, all deployed inside Docker.
+This project involves building an **API** using Python's **FastAPI** framework and **Hugging Face** **Transformers** to deliver an AI-powered **Sentiment Analysis** solution, all deployed inside **Docker**.
 
 ---
 
@@ -10,13 +10,7 @@ API, or Application Programming Interface, is a set of rules that allow programs
 
 ### What is FastAPI? 
 
-FastAPI is a high-performance, easy to build-with, Python web framework capable of building and delivering API solutions.
-
-### What is Sentiment Analysis?
-
-Sentiment Analysis is a typical AI task performed by a trained model that envolves the process of analyzing text to determine the emotional tone of a message.
-
-### Why FastAPI for AI?
+FastAPI is a high-performance, easy to build-with, Python web framework capable of delivering API solutions.
 
 1. Performance - FastAPI runs on ASGI (Asynchronous Server Gateway Interface) making it extremely fast
 
@@ -25,6 +19,18 @@ Sentiment Analysis is a typical AI task performed by a trained model that envolv
 3. Production - It is a great choice for scaling into production, handling CORS, middleware, OAuth2, WebSockets, and more
 
 4. Auto-Generated Docs - FastAPI automatically generates interactive documentation based on the written code and type annotations, which makes it easier for collaboration and testing
+
+### What is Hugging Face?
+
+
+
+### What is Sentiment Analysis?
+
+Sentiment Analysis is a typical AI task performed by a trained model that envolves the process of analyzing text to determine the emotional tone of a message.
+
+### What is Docker?
+
+
 
 ---
 
