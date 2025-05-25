@@ -1,0 +1,8 @@
+Rate Limiting
+Prevent abuse by limiting the number of requests per user/IP.
+
+Frontend UI
+Create a simple web interface to interact with your API.
+
+Deployment Scripts
+Add scripts or documentation for deploying to cloud platforms (e.g., Azure, AWS, Heroku).

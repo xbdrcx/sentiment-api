@@ -30,26 +30,21 @@ Sentiment Analysis is a typical AI task performed by a trained model that envolv
 
 ## Quick Start
 
-These instruction should work on a Windows PC with Python >=3.13.3 and git installed:
+These instructions require a Windows PC with Python 3.13.3, git, and Docker installed:
 
-1. Clone repository
+1. Clone and access repository
 ```
-git clone https://github.com/xbdrcx/fastapi4ai
-```
-
-2. Install dependencies
-```
-cd fastapi4ai
-python -m venv venv
-cd venv/scripts
-activate
-cd ../..
-python -m pip install -r requirements.txt
+git clone https://github.com/xbdrcx/fastapi4ai && cd fastapi4ai
 ```
 
-3. Run the application
+2. Build Docker image
 ```
-cd app && uvicorn main:app --reload
+docker build -t fastapi4ai .
+```
+
+3. Run Docker container
+```
+docker run -p 8000:8000 fastapi4ai
 ```
 
 4. Access the API: http://localhost:8000/docs
