@@ -1,7 +1,7 @@
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
-from fastapi import FastAPI, APIRouter, HTTPException
+from fastapi import FastAPI, APIRouter, HTTPException, Request
 from transformers import pipeline
 from typing import List
 from schemas import *
@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Load model for sentiment analysis
-sentiment_pipeline = pipeline("sentiment-analysis")
+sentiment_pipeline = pipeline("text-classification", model="tabularisai/multilingual-sentiment-analysis")
 
 # Define slowapi Rate Limiter
 limiter = Limiter(key_func=get_remote_address)
@@ -46,7 +46,7 @@ def root():
     }
 )
 @limiter.limit("5/minute")  # Limit to 5 requests / minute per IP
-def analyze(inputs: List[TextInput]):
+def analyze(request: Request, inputs: List[TextInput]):
     logger.info(f"Received {len(inputs)} texts for analysis")
     results = []
     for input in inputs:

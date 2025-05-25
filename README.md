@@ -61,3 +61,7 @@ The repository includes:
 
 <code>app/_request.py</code> - A script to test the /analyze API route. 
 
+---
+
+Model used: https://huggingface.co/tabularisai/multilingual-sentiment-analysis
+
