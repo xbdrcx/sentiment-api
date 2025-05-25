@@ -5,7 +5,7 @@ from fastapi import FastAPI, APIRouter, HTTPException, Request
 from transformers import pipeline
 from typing import List
 from schemas import *
-import torch, logging
+import torch, logging, uvicorn
 torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Configure logging
@@ -60,3 +60,6 @@ def analyze(request: Request, inputs: List[TextInput]):
     return results
 
 app.include_router(router)
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", reload=True)
