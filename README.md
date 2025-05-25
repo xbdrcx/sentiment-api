@@ -42,17 +42,17 @@ These instructions require a Windows PC with Python 3.13.3, git, and Docker inst
 
 1. Clone and access repository
 ```
-git clone https://github.com/xbdrcx/fastapi4ai && cd fastapi4ai
+git clone https://github.com/xbdrcx/sentiment-api && cd sentiment-api
 ```
 
 2. Build Docker image (this step might take a bit)
 ```
-docker build -t fastapi4ai .
+docker build -t sentiment-api .
 ```
 
 3. Run Docker container
 ```
-docker run -p 8000:8000 fastapi4ai
+docker run -p 8000:8000 sentiment-api
 ```
 
 4. Access the API: http://localhost:8000/docs
@@ -61,7 +61,7 @@ docker run -p 8000:8000 fastapi4ai
 
 1. Clone and access repository
 ```
-git clone https://github.com/xbdrcx/fastapi4ai && cd fastapi4ai
+git clone https://github.com/xbdrcx/sentiment-api && cd sentiment-api
 ```
 
 2. Create virtual environment and install dependencies
