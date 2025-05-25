@@ -55,6 +55,25 @@ docker run -p 8000:8000 fastapi4ai
 
 4. Access the API: http://localhost:8000/docs
 
+**To run locally without Docker:**
+
+1. Clone and access repository
+```
+git clone https://github.com/xbdrcx/fastapi4ai && cd fastapi4ai
+```
+
+2. Create virtual environment and install dependencies
+```
+python -m venv venv && cd scripts/venv && activate && cd ../../app
+```
+
+3. Run application
+```
+uvicorn main:app --reload
+```
+
+4. Access the API: http://localhost:8000/docs
+
 ---
 
 The repository includes:
