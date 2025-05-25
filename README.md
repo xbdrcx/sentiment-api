@@ -48,3 +48,13 @@ cd app && uvicorn main:app --reload
 ```
 
 4. Access the API: http://localhost:8000/docs
+
+The repository includes:
+
+<code>app/main.py</code> - Main script where all the API logic, AI model, and configuration is at.
+
+<code>app/schemas.py</code> - File with the necessary data schemas for the API.
+
+<code>app/test_main.py</code> - A collection of unit tests for the application.
+
+<code>app/_request.py</code> - A script to test the /analyze API route. 
