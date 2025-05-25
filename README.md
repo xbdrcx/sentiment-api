@@ -30,7 +30,7 @@ Sentiment Analysis is a typical AI task performed by a trained model that envolv
 
 ## Quick Start
 
-These instructions require a Windows PC with Python 3.13.3, git, and Docker installed:
+These instructions require a Windows PC with Python 3.13.3, git, and Docker installed as well as 10GBs of free memory:
 
 1. Clone and access repository
 ```
