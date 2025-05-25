@@ -22,7 +22,7 @@ FastAPI is a high-performance, easy to build-with, Python web framework capable 
 
 ### What is Hugging Face?
 
-
+Hugging Face is an online platform and open-source community that provide tools, models, and resources for AI projects.
 
 ### What is Sentiment Analysis?
 
@@ -30,7 +30,7 @@ Sentiment Analysis is a typical AI task performed by a trained model that envolv
 
 ### What is Docker?
 
-
+Docker is an Open-Source platform that allows developers to package applications into Containers, which are self-contained environments that include everything the application needs to run. This allows for consistent and reliable deployments across different enviroments.
 
 ---
 
