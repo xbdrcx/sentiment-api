@@ -43,6 +43,7 @@ cd fastapi4ai
 python -m venv venv
 cd venv/scripts
 activate
+cd ../..
 python -m pip install -r requirements.txt
 ```
 
