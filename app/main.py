@@ -5,7 +5,7 @@ from fastapi import FastAPI, APIRouter, HTTPException, Request
 from transformers import pipeline
 from typing import List
 from schemas import *
-import torch, logging, uvicorn
+import torch, logging
 torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Configure logging
