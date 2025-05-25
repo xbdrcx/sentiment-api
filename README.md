@@ -12,6 +12,8 @@ API, or Application Programming Interface, is a set of rules that allow programs
 
 FastAPI is a high-performance, easy to build-with, Python web framework capable of delivering API solutions.
 
+### Why FastAPI?
+
 1. Performance - FastAPI runs on ASGI (Asynchronous Server Gateway Interface) making it extremely fast
 
 2. Clean Syntax - Syntax-wise it is Pythonic, leveraging type hints and Pydantic models for data validation, making it less error-prone and much faster
