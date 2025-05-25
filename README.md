@@ -30,7 +30,7 @@ Sentiment Analysis is a typical AI task performed by a trained model that envolv
 
 ### What is Docker?
 
-Docker is an Open-Source platform that allows developers to package applications into Containers, which are self-contained environments that include everything the application needs to run. This allows for consistent and reliable deployments across different enviroments.
+Docker is an open-source platform that allows developers to package applications into Containers, which are self-contained environments that include everything the application needs to run. This allows for consistent and reliable deployments across different enviroments.
 
 ---
 
