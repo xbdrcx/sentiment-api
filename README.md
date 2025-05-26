@@ -91,3 +91,7 @@ The repository includes:
 ---
 
 Model used: https://huggingface.co/tabularisai/multilingual-sentiment-analysis
+
+---
+
+MIT License, Copyright (c) 2025 Bruno Cruz - see the LICENSE file for details.
